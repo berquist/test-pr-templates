@@ -5,11 +5,11 @@ on:
   workflow_dispatch:
   pull_request_target:
     branches-ignore:
-      - master
+      - main
 # Push option may be used in the future for developers forks
 #  push:
 #    branches-ignore:
-#      - master
+#      - main
 
 # NOTE: This script is run using pull_request_target.  It is critical that
 #       that any changes to this script be looked at very carefully.
