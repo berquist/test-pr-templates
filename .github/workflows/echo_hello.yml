@@ -1,0 +1,25 @@
+---
+name: echo hello
+
+on:
+  workflow_dispatch:
+  pull_request_target:
+    branches-ignore:
+      - main
+# Push option may be used in the future for developers forks
+#  push:
+#    branches-ignore:
+#      - main
+
+# NOTE: This script is run using pull_request_target.  It is critical that
+#       that any changes to this script be looked at very carefully.
+#       !! DO NOT COMPILE OR RUN ANY CODE FROM THE PR SOURCE REPO !!
+#       Any changes to this script will not be run until it is merged into
+#       the main repo.
+
+jobs:
+  my-echo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo 'hello'
